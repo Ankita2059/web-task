@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+          
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            align-items: center;
+            padding: 3rem;
+            box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.4);
+            width: fit-content;
+            padding-bottom: 0.5rem;
+        }
+
+        form label {
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        form input {
+            box-shadow: 1px 1px 3px 3px rgb(0, 0, 0, 0.2);
+            padding: 5px;
+            font-size: 18px;
+            border: none;
+            text-align: center;
+        }
+
+        input::placeholder {
+            transition: font-size 0.3s ease;
+        }
+
+        label:hover+input::placeholder {
+            font-size: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .inputs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .submit-btn,
+        .reset-btn {
+            height: 4rem;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #submit,
+        #reset {
+            background-color: rgb(32, 239, 239);
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            box-shadow: none;
+            padding: 8px;
+            padding-left: 25px;
+            padding-right: 25px;
+            text-align: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        #reset {
+            background-color: rgb(104, 197, 208);
+        }
+
+        #submit:hover,
+        #reset:hover {
+            opacity: 0.7;
+            font-size: 23px;
+        }
+
+        .inform {
+            text-wrap: nowrap;
+            font-size: 14px;
+            color: rgb(79, 234, 84);
+            visibility: hidden;
+        }
+
+        .input-box-and-inform {
+            margin-left: 3rem;
+            margin-top: 0.3rem;
+        }
+    </style> -->
+</head>
+
+<body>
+    <form name="myform" id="myform">
+        <h1>User Detail</h1>
+
+        <div class="inputs">
+            <label for="firstname">First name</label>
+            <div class="input-box-and-inform">
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your First name" />
+                <p class="inform" id="firstname-inform">*Firstname is required.</p>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <label for="lastname">Last name</label>
+            <div class="input-box-and-inform">
+                <input type="text" name="lastname" id="lastname" placeholder="Enter your Last name" />
+                <p class="inform" id="lastname-inform">*Lastname is required.</p>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <label for="phone">Phone no</label>
+            <div class="input-box-and-inform">
+                <input type="number" name="phone" id="phone" placeholder="Enter your phone number" />
+                <p class="inform" id="phone-inform">*Phone Number is required.</p>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <label for="email">Email</label>
+            <div class="input-box-and-inform">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" />
+                <p class="inform">*Email is required.</p>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <label for="address">Address</label>
+            <div class="input-box-and-inform">
+                <input type="text" name="address" id="address" placeholder="Enter your address" />
+                <p class="inform">*Address is required.</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div class="submit-btn">
+                <input type="submit" name="submit" id="submit" />
+            </div>
+
+            <div class="reset-btn">
+                <input type="reset" name="reset" id="reset" />
+            </div>
+        </div>
+    </form>
+    <script>
+
+        document.forms["myform"].addEventListener("submit", (event) => {
+            event.preventDefault();
+            const obj = {
+                firstname: getFirstName(),
+                lastname: getLastName(),
+                phone: getPhoneNumber(),
+                email: getEmail(),
+                address: getAddress()
+            };
+
+            if (obj.firstname && obj.lastname && obj.phone) {
+                const newObj = JSON.stringify(obj);
+                console.log(newObj);
+            }
+
+        });
+
+        function isEmpty(value) {
+            return !!!value;
+        }
+
+        function getFirstName() {
+            const firstname = document.getElementById("firstname").value;
+            if (firstname.length < 3) {
+                document.getElementById("firstname-inform").style.visibility = "visible";
+                return;
+            }
+
+            document.getElementById("firstname-inform").style.visibility = "hidden";
+            return firstname;
+        }
+
+        function getLastName() {
+            const lastname = document.getElementById("lastname").value;
+            if (isEmpty(lastname)) {
+                document.getElementById("lastname-inform").style.visibility = "visible";
+                return;
+            }
+            document.getElementById("lastname-inform").style.visibility = "hidden";
+            return lastname;
+        }
+
+        function getPhoneNumber() {
+            const phone = document.getElementById("phone").value;
+            if (isEmpty(phone)) {
+                document.getElementById("phone-inform").style.visibility = "visible";
+                return;
+            }
+            document.getElementById("phone-inform").style.visibility = "hidden";
+            return phone;
+        }
+
+        function getEmail() {
+            const email = document.getElementById("email").value;
+            if (!isEmpty(email)) {
+                return email;
+            }
+        }
+
+        function getAddress() {
+            const address = document.getElementById("address").value;
+            if (!isEmpty(address)) {
+                return address;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

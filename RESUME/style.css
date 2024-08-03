@@ -1,0 +1,308 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    border: 3px solid rgb(249, 246, 246); 
+    padding: 20px; 
+    margin: 0 auto; 
+    max-width: 800px; 
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.my-header{
+    display: flex;
+    align-items: center;
+    color: white; 
+    justify-content: space-between;
+}
+
+
+.my-header .top-side{
+  top: 20px;
+  position: absolute;
+  background-color:#012b5d;
+  height: 200px;
+  width: 800px;
+  clip-path: polygon(100% 0%, 100% 100%, 88.2% 99.5%, 0% 31.3%, 0% 0%);
+  z-index: 2;
+  
+}
+ .my-header .top-side1{
+  top: 20px;
+  width: 1000px;
+  height: 200px;
+  position: absolute;
+  background-color: #515ca4;
+  clip-path: polygon(0% 0%, 57.9% 0%, 0% 100%);
+  z-index: 1;
+}
+
+.my-header img{
+  margin-left: 70px;
+  z-index: 3;
+  margin-top:  30px;
+}
+
+.my-header h1{
+  font-size: 35px;
+  font-weight: 500;
+  z-index: 3;
+  width: 1100px;
+  margin-left: 40px;
+  margin-bottom: 60px;
+}
+
+.my-header h2{
+  font-weight: 400;
+  z-index: 3;
+  position: relative;
+  top: 10px;
+  right: 250px;
+  width: 700px;
+}
+
+/* middle part (left side) */
+/* about */
+
+ aside{
+  width: 40%;
+ }
+
+ .about-logo{
+  display: flex;
+  margin-bottom: 10px;
+ }
+
+ .about img{
+  margin-top: 40px;
+ }
+
+ .about h3{
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 40px;
+ }
+
+ .about ul{
+  position: relative;
+ }
+
+ .about ul li{
+  list-style: none;
+  cursor: pointer;
+  padding-top: 5px;
+ }
+
+ .about ul li span{
+  font-weight: 400;
+  padding-left: 100px;
+  display: flex;
+  margin-top: -20px;
+ } 
+
+ .about h4{
+  font-weight: 500;
+ }
+
+/* skills */
+
+.skill-logo{
+  display: flex;
+  margin-top: 20px;
+}
+
+.skill-logo h3{
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+progress{
+  width: 100%;
+  height: 20px;
+  margin-top: 3px;
+  margin-right: 9px;
+  
+}
+
+.skill p{
+  font-weight: 400;
+}
+
+.skill{
+  margin-top: 10px;
+}
+
+.skills hr{
+  margin-top: 10px;
+}
+
+/* languagecss */
+
+.language-logo{
+  display: flex;
+  margin-top: 20px;
+}
+
+.language-logo h3{
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+}
+
+.language{
+  margin-top: 10px;
+}
+
+.language p{
+  font-weight: 400;
+}
+
+.languages hr{
+  margin-top: 10px;
+}
+
+/* softwarecss */
+.software-logo{
+  display: flex;
+  margin-top: 20px;
+}
+
+.software-logo h3{
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 3px;
+}
+
+.softwares{
+  margin-top: 10px;
+}
+
+.software p{
+  font-weight: 400;
+}
+
+.softwares hr{
+  margin-top: 10px;
+}
+
+/* rightcss */
+main{
+  padding-left: 30px;
+  width:55% ;
+  float: right;
+  margin-top: -1038px;
+}
+
+.profile-logo{
+  display: flex;
+  margin-top: 15px;
+}
+
+.profile-logo h3{
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile hr{
+  margin-top: 10px;
+}
+
+.profile p{
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+
+/* workexpcss */
+.workexp-logo {
+  display: flex;
+  margin-top: 20px;
+}
+
+.workexp-logo h3 {
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.workexp hr {
+  margin-top: 10px;
+}
+
+.work-project {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.work-project h4{
+  font-weight: 500;
+}
+.work-project span{
+  font-weight: 400;
+}
+
+.work-detail{
+  display: flex;
+  margin-top: 20px;
+}
+
+.work-detail p{
+  padding-left: 20px;
+  width: 600px;
+}
+
+.work-detail span{
+  color: #2e609e;
+}
+
+
+
+/* educationcss */
+
+.education-logo{
+  display: flex;
+  margin-top: 20px;
+ 
+}
+
+.education-logo h3{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.education-detail{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.education-detail h4{
+  font-weight: 600;
+}
+
+.institutelocation{
+  padding-left: 125px;
+}
+
+.date{
+  font-weight: 400;
+  margin-top: 20px;
+  color:#2e609e;
+}
+

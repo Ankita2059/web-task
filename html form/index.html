@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <h3><u>Student Form</u></h3>
+    <form action="" method="post">
+      <label for="FirstName">FirstName<span style="color: red">*</span>:</label
+      ><br />
+      <input
+        type="text"
+        name="FirstName"
+        id="FirstName"
+        pattern="[a-z]*"
+        required
+      />
+      <br />
+      <label for="MiddleName">MiddleName:</label><br />
+      <input type="text" name="MiddleName" id="MiddleName" />
+      <br />
+      <label for="LastName">LastName<span style="color: red">*</span>:</label
+      ><br />
+      <input type="text" name="LastName" id="LastName" required />
+      <br />
+      <label for="Email">Email<span style="color: red">*</span>:</label><br />
+      <input type="Email" name="Email" id="Email" required /><br /><br />
+
+      <label for="gender">Gender:</label>
+
+      <label
+        ><input
+          type="radio"
+          name="gender"
+          value="male"
+          id="gender"
+        />male</label
+      >
+
+      <label
+        ><input
+          type="radio"
+          name="gender"
+          value="female"
+          id="gender"
+        />Female</label
+      >
+
+      <label for="Sem">Semester:</label>
+      <select name="Semester" id="Sem">
+        <option value="1stSem">First Semester</option>
+        <option value="2ndSem">Second Semester</option>
+        <option value="3rdSem">Third Semester</option>
+        <option value="4thSem">Fourth Semester</option>
+        <option value="5thSem">Fifth Semester</option>
+        <option value="6thSem">Sixth Semester</option>
+        <option value="7thSem">Seventh Semester</option>
+        <option value="8thSem">Eighth Semester</option>
+      </select>
+
+      <label>Choose your favourite Subject:</label><br />
+      <input
+        type="checkbox"
+        id="Subject"
+        checked
+        name="Subjects"
+        value="Design analysis of algorithm"
+      />
+      <label for="Subject">Design analysis of algorithm</label><br />
+      <input
+        type="checkbox"
+        id="Subject2"
+        name="Subjects"
+        value="Web Technology"
+      />
+      <label for="Subject2">Web Technology</label><br />
+      <input
+        type="checkbox"
+        id="Subject3"
+        name="Subjects"
+        value="System Analysis and Design"
+      />
+      <label for="Subject3">System Analysis and Design</label><br />
+      <input
+        type="checkbox"
+        id="Subject4"
+        name="Subjects"
+        value="Simulation and Modeling"
+      />
+      <label for="Subject4">Simulation and Modeling</label><br />
+      <input
+        type="checkbox"
+        id="Subject5"
+        name="Subjects"
+        value="Cryptography"
+      />
+      <label for="Subject5">Cryptography</label><br />
+      <input type="checkbox" id="Subject6" name="Subjects" value="Multimedia" />
+      <label for="Subject6">Multimedia</label><br /><br />
+
+      <label for="sdes">Discription:</label><br />
+      <textarea name="AboutStudent" id="sdes" cols="30" rows="10"></textarea>
+      <br />
+      <br />
+
+      <input type="Submit" />
+      <input type="Reset" />
+    </form>
+  </body>
+</html>
